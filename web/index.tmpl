@@ -50,7 +50,6 @@
                     var messages = evt.data.split('\n');
                     for (var i = 0; i < messages.length; i++) {
                         var item = document.createElement("div");
-                        console.log(messages[i])
                         let message = JSON.parse(messages[i]);
                         if(message.user_id == userId) {
                             item.innerText = "You - " + getNow() + " - " + message.message;

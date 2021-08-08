@@ -115,7 +115,6 @@ func (s *subscription) writePump() {
 				c.write(websocket.CloseMessage, []byte{})
 				return
 			}
-			log.Println(message)
 			if err := c.write(websocket.TextMessage, message); err != nil {
 				return
 			}
